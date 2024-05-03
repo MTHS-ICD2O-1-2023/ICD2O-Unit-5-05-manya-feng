@@ -6,13 +6,9 @@
 "use strict"
 
 function calculate() {
-  const lengthAString = prompt("Enter length A of the triangle (mm):")
-  const lengthBString = prompt("Enter length A of the triangle (mm):")
-  const lengthCString = prompt("Enter length A of the triangle (mm):")
-
-  const lengthA = parseFloat(lengthAString)
-  const lengthB = parseFloat(lengthBString)
-  const lengthC = parseFloat(lengthCString)
+  const lengthA = parseFloat(lengthA)
+  const lengthB = parseFloat(lengthB)
+  const lengthC = parseFloat(lengthC)
 
   // using the cosine law
   const angleA = Math.acos((lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)) * (180 / Math.PI)
