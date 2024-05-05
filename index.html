@@ -29,34 +29,35 @@
             <img src="./images/triangle.png" alt="triangle image">
           </div>
           <br />
-          <div class="page-content">Enter 3 lengths and angles of a triangle:</div>
+          <div class="page-content">Enter 3 lengths of a triangle:</div>
           <form action="#">
             <div class="mdl-textfield mdl-js-textfield">
               <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="lengthA" />
-              <label class="mdl-textfield__label" for="length-A">Length Selected</label>
+              <label class="mdl-textfield__label" for="length A">Length Selected</label>
               <span class="mdl-textfield__error">Input is not a number.</span>
             </div>
             <br />
             <div class="mdl-textfield mdl-js-textfield">
               <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="lengthB" />
-              <label class="mdl-textfield__label" for="length-B">Length Selected</label>
-              <span class="mdl-textfield__error"></span>
+              <label class="mdl-textfield__label" for="length B">Length Selected</label>
+              <span class="mdl-textfield__error">Input is not a number.</span>
             </div>
             <br />
             <div class="mdl-textfield mdl-js-textfield">
               <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="lengthC" />
-              <label class="mdl-textfield__label" for="length-C">Length Selected</label>
-              <span class="mdl-textfield__error"></span>
+              <label class="mdl-textfield__label" for="length C">Length Selected</label>
+              <span class="mdl-textfield__error">Input is not a number.</span>
+            </div> 
+            <br />
             </form>
             <!-- Accent-colored raised button with ripple -->
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-              onclick="calculate()">
-              Calculate
+              onclick="button()">
+              Check
             </button>
-            </form>
-            <br />
-            <br />
+            <br /><br />
             <div class="page-content-answer">
+          <div id="math"></div>
           <div id="answer"></div>
         </div>
       </main>
