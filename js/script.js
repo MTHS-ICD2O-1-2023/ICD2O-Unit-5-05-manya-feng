@@ -6,9 +6,14 @@
 "use strict"
 
 function calculate() {
-  const lengthA = parseFloat(lengthA)
-  const lengthB = parseFloat(lengthB)
-  const lengthC = parseFloat(lengthC)
+
+  const lengthAString = parseInt(document.getElementById("lengthA").value)
+  const lengthBString = parseInt(document.getElementById("lengthB").value)
+  const lengthCString = parseInt(document.getElementById("lengthC").value)
+
+  const lengthA = parseFloat(lengthAString)
+  const lengthB = parseFloat(lengthBString)
+  const lengthC = parseFloat(lengthCString)
 
   // using the cosine law
   const angleA = Math.acos((lengthB ** 2 + lengthC ** 2 - lengthA ** 2) / (2 * lengthB * lengthC)) * (180 / Math.PI)
@@ -21,5 +26,22 @@ function calculate() {
   console.log(angleB)
   console.log(angleC)
   console.log(sumOfAngles)
+
+  if (angleA == angleB && angleA == angleC) {
+    document.getElementById("math").innerHTML =
+      "You have an equilateral triangle!"
+  } else if (angleA != angleB && angleA != angleC && angleB != angleC) {
+    document.getElementById("math").innerHTML = 
+      "You have a scalene triangle!"
+  } else if (
+    (angleA != angleB && angleA == angleC) ||
+    (angleA == angleB && angleA != angleC)
+  ) {
+    document.getElementById("math").innerHTML =
+    "You have an isosceles triangle!"
+  } else {
+    document.getElementById("math").innerHTML =
+      "This triangle doesn't exist."
   }
+}
   
